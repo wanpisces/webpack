@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>人民社区</title>
+    <script
+      type="text/javascript"
+      src="http://api.map.baidu.com/api?v=2.0&ak=iyUj8juV15MB8qGwiM6BfwebPs3cUMOm"
+    ></script>
+  <link href="/dist/css/main.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="app"></div>
+    <div class="red-color">今天天气真晴朗，处处有花香</div>
+    <div><img src="../static/images/avator.jpg" alt="" /></div>
+  <script type="text/javascript" src="/dist/js/base.js"></script><script type="text/javascript" src="/dist/js/app.js"></script></body>
+  <script>
+    function getResponse(resp) {
+      localStorage.setItem("veria", resp);
+    }
+  </script>
+  <script>
+    window.onbeforeunload = function() {
+      localStorage.removeItem("veria");
+    };
+  </script>
+</html>
